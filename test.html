@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var globalVar = "I'm a global variable";
+      let globalLet = "I'm a global let variable";
+
+      console.log(window.globalVar); // Accessible as a property of 'window' (global object)
+      console.log(window.globalLet); // undefined, not accessible as a property of 'window'
+
+      function testScope() {
+        var functionVar = "I'm a function-scoped variable";
+        let functionLet = "I'm a function-scoped let variable";
+
+        console.log(window.functionVar); // Accessible as a property of 'window' (global object)
+        console.log(window.functionLet); // undefined, not accessible as a property of 'window'
+      }
+
+      testScope();
+    </script>
+  </body>
+</html>
